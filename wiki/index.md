@@ -8,6 +8,9 @@ Operational guidance for agents using the task briefs and working from the runti
 |---------|---------|---------|
 | [Runtime instructions](runtime.md) | User-authored runtime rules: read the assigned task brief, work the assigned code section, and use agents thoughtfully. | 2026-04-23 |
 | [Task brief navigation](agents/task-brief-navigation.md) | Explains how to read the task briefs, which section to use first, and where to go next by codebase area. | 2026-04-23 |
+| [Severity](severity.md) | Generic vulnerability taxonomy + tier rubric (A/B/C) + stop rule. Codebase-agnostic. | 2026-04-24 |
+| [Reachability](reachability.md) | Neovim-specific bar: maintainer threat model, 5-question self-check, carve-outs. | 2026-04-24 |
+| [CVE library](cves/index.md) | Worked examples — accepted (Tier A) and rejected (Tier C) findings. | 2026-04-24 |
 
 ## runtime-plugins-and-shell
 
