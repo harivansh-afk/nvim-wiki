@@ -31,8 +31,10 @@ The runtime instructions and task briefs define a consistent operating model for
 - [Trust and local config surfaces](../codebase/trust-and-local-config-surfaces.md): tasks 05 to 08
 - [RPC and channel surfaces](../codebase/rpc-and-channel-surfaces.md): tasks 10 to 12
 - [Terminal and TUI surfaces](../codebase/terminal-and-tui-surfaces.md): tasks 13 to 15
-- [Persistence and parser surfaces](../codebase/persistence-and-parser-surfaces.md): tasks 16 to 18
+- [Persistence and parser surfaces](../codebase/persistence-and-parser-surfaces.md): tasks 16 to 18, 26, 27
 - [Display and formatting surfaces](../codebase/display-and-formatting-surfaces.md): task 19
+- filetype-and-runtime (no shared surface map yet): tasks 21 to 25
+- lifecycle-and-races (no shared surface map yet): tasks 28 to 30
 
 ## Suggested reading order for an assigned task
 
