@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mostly Vim-derived command parser boundary. [`src/nvim/ex_docmd.c`](../../../neovim/src/nvim/ex_docmd.c) implements `parse_cmd_address()` and `get_address()`, which walk raw Ex command text to interpret ranges, marks, searches, offsets, and special forms like `%` or `*`. It ranks highly because this is hand-rolled pointer-walking parser code with explicit security overflow history, and it sits in front of a huge amount of command execution logic.
+This is a mostly Vim-derived command parser boundary. [`src/nvim/ex_docmd.c`](../../raw/neovim/src/nvim/ex_docmd.c) implements `parse_cmd_address()` and `get_address()`, which walk raw Ex command text to interpret ranges, marks, searches, offsets, and special forms like `%` or `*`. It ranks highly because this is hand-rolled pointer-walking parser code with explicit security overflow history, and it sits in front of a huge amount of command execution logic.
 
 ## Relevant options and knobs
 
@@ -12,7 +12,7 @@ This is a mostly Vim-derived command parser boundary. [`src/nvim/ex_docmd.c`](..
 
 ## Relevant files
 
-- [`src/nvim/ex_docmd.c`](../../../neovim/src/nvim/ex_docmd.c)
+- [`src/nvim/ex_docmd.c`](../../raw/neovim/src/nvim/ex_docmd.c)
 
 ## File tree
 
@@ -24,9 +24,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): places Ex/Vimscript command execution in the core editor subsystem.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): useful for command-behavior differences that can change expectations around range parsing.
-- [`runtime/doc/message.txt`](../../../neovim/runtime/doc/message.txt): relevant for the concrete error surfaces that parser failures expose.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): places Ex/Vimscript command execution in the core editor subsystem.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): useful for command-behavior differences that can change expectations around range parsing.
+- [`runtime/doc/message.txt`](../../raw/neovim/runtime/doc/message.txt): relevant for the concrete error surfaces that parser failures expose.
 
 ## Recent fix / history signal
 

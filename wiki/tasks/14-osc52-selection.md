@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a narrow Neovim-owned parser inside the terminal stack. [`src/nvim/vterm/state.c`](../../../neovim/src/nvim/vterm/state.c) implements `osc_selection()`, which parses OSC 52 clipboard / selection requests, decodes base64 fragments, tracks partial state across fragments, and forwards decoded data into callbacks. It ranks highly because it is externally driven, stateful, and adjacent to clipboard behavior—exactly the kind of small parser that can hide high-impact mistakes.
+This is a narrow Neovim-owned parser inside the terminal stack. [`src/nvim/vterm/state.c`](../../raw/neovim/src/nvim/vterm/state.c) implements `osc_selection()`, which parses OSC 52 clipboard / selection requests, decodes base64 fragments, tracks partial state across fragments, and forwards decoded data into callbacks. It ranks highly because it is externally driven, stateful, and adjacent to clipboard behavior—exactly the kind of small parser that can hide high-impact mistakes.
 
 ## Relevant options and knobs
 
@@ -12,9 +12,9 @@ This is a narrow Neovim-owned parser inside the terminal stack. [`src/nvim/vterm
 
 ## Relevant files
 
-- [`src/nvim/vterm/state.c`](../../../neovim/src/nvim/vterm/state.c)
-- [`src/nvim/terminal.c`](../../../neovim/src/nvim/terminal.c)
-- [`runtime/doc/terminal.txt`](../../../neovim/runtime/doc/terminal.txt)
+- [`src/nvim/vterm/state.c`](../../raw/neovim/src/nvim/vterm/state.c)
+- [`src/nvim/terminal.c`](../../raw/neovim/src/nvim/terminal.c)
+- [`runtime/doc/terminal.txt`](../../raw/neovim/runtime/doc/terminal.txt)
 
 ## File tree
 
@@ -28,9 +28,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/terminal.txt`](../../../neovim/runtime/doc/terminal.txt): documents OSC 52 support and its security rationale.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): explicitly notes that `vterm/` is Nvim-owned, not a Vim-upstream sync surface.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): useful when distinguishing terminal-specific Nvim behavior from legacy editor core behavior.
+- [`runtime/doc/terminal.txt`](../../raw/neovim/runtime/doc/terminal.txt): documents OSC 52 support and its security rationale.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): explicitly notes that `vterm/` is Nvim-owned, not a Vim-upstream sync surface.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): useful when distinguishing terminal-specific Nvim behavior from legacy editor core behavior.
 
 ## Recent fix / history signal
 

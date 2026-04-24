@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Neovim-specific transport unification layer. [`src/nvim/channel.c`](../../../neovim/src/nvim/channel.c), [`src/nvim/msgpack_rpc/server.c`](../../../neovim/src/nvim/msgpack_rpc/server.c), and [`src/nvim/event/socket.c`](../../../neovim/src/nvim/event/socket.c) bring together jobs, accepted sockets, outbound connections, stdio embed mode, PTYs, and raw streams. It ranks highly because one abstraction error here can affect several externally reachable surfaces at once.
+This is a Neovim-specific transport unification layer. [`src/nvim/channel.c`](../../raw/neovim/src/nvim/channel.c), [`src/nvim/msgpack_rpc/server.c`](../../raw/neovim/src/nvim/msgpack_rpc/server.c), and [`src/nvim/event/socket.c`](../../raw/neovim/src/nvim/event/socket.c) bring together jobs, accepted sockets, outbound connections, stdio embed mode, PTYs, and raw streams. It ranks highly because one abstraction error here can affect several externally reachable surfaces at once.
 
 ## Relevant options and knobs
 
@@ -12,9 +12,9 @@ This is a Neovim-specific transport unification layer. [`src/nvim/channel.c`](..
 
 ## Relevant files
 
-- [`src/nvim/channel.c`](../../../neovim/src/nvim/channel.c)
-- [`src/nvim/msgpack_rpc/server.c`](../../../neovim/src/nvim/msgpack_rpc/server.c)
-- [`src/nvim/event/socket.c`](../../../neovim/src/nvim/event/socket.c)
+- [`src/nvim/channel.c`](../../raw/neovim/src/nvim/channel.c)
+- [`src/nvim/msgpack_rpc/server.c`](../../raw/neovim/src/nvim/msgpack_rpc/server.c)
+- [`src/nvim/event/socket.c`](../../raw/neovim/src/nvim/event/socket.c)
 
 ## File tree
 
@@ -30,9 +30,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): explicitly identifies RPC, jobs, sockets, and PTYs as trust boundaries.
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): notes that localhost TCP sockets are generally less secure than named pipes or Unix sockets.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): helpful because job/channel/terminal behavior diverges sharply from classic Vim.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): explicitly identifies RPC, jobs, sockets, and PTYs as trust boundaries.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): notes that localhost TCP sockets are generally less secure than named pipes or Unix sockets.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): helpful because job/channel/terminal behavior diverges sharply from classic Vim.
 
 ## Recent fix / history signal
 

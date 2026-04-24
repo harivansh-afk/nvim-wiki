@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mostly Vim-derived tag-file trust boundary. In [`src/nvim/tag.c`](../../../neovim/src/nvim/tag.c), `jumpto_tag()` and `expand_tag_fname()` turn data from tag files into filenames, search commands, and sometimes Ex command fragments. It ranks very high because recent fixes show both code-execution and memory-safety history here, and because tag files are often treated as benign text when they are really executable navigation metadata.
+This is a mostly Vim-derived tag-file trust boundary. In [`src/nvim/tag.c`](../../raw/neovim/src/nvim/tag.c), `jumpto_tag()` and `expand_tag_fname()` turn data from tag files into filenames, search commands, and sometimes Ex command fragments. It ranks very high because recent fixes show both code-execution and memory-safety history here, and because tag files are often treated as benign text when they are really executable navigation metadata.
 
 ## Relevant options and knobs
 
@@ -13,7 +13,7 @@ This is a mostly Vim-derived tag-file trust boundary. In [`src/nvim/tag.c`](../.
 
 ## Relevant files
 
-- [`src/nvim/tag.c`](../../../neovim/src/nvim/tag.c)
+- [`src/nvim/tag.c`](../../raw/neovim/src/nvim/tag.c)
 
 ## File tree
 
@@ -25,9 +25,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/tagsrch.txt`](../../../neovim/runtime/doc/tagsrch.txt): big-picture behavior for tag searches and secure restrictions around tag commands.
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): option-level context for `tags`, `tagrelative`, `tagfunc`, and `helpfile`.
-- [`runtime/doc/message.txt`](../../../neovim/runtime/doc/message.txt): relevant because some secure-mode tag failures surface as classic “command not allowed” messages.
+- [`runtime/doc/tagsrch.txt`](../../raw/neovim/runtime/doc/tagsrch.txt): big-picture behavior for tag searches and secure restrictions around tag commands.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): option-level context for `tags`, `tagrelative`, `tagfunc`, and `helpfile`.
+- [`runtime/doc/message.txt`](../../raw/neovim/runtime/doc/message.txt): relevant because some secure-mode tag failures surface as classic “command not allowed” messages.
 
 ## Recent fix / history signal
 

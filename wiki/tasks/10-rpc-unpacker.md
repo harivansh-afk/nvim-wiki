@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Neovim-specific remote parser boundary. [`src/nvim/msgpack_rpc/unpacker.c`](../../../neovim/src/nvim/msgpack_rpc/unpacker.c) contains `unpacker_parse_header()`, `unpacker_advance()`, and the redraw fast path in `unpacker_parse_redraw()`. It ranks highly because this is the first structured parse of bytes arriving from RPC peers, including special treatment for UI redraw traffic, partial reads, and state-machine recovery.
+This is a Neovim-specific remote parser boundary. [`src/nvim/msgpack_rpc/unpacker.c`](../../raw/neovim/src/nvim/msgpack_rpc/unpacker.c) contains `unpacker_parse_header()`, `unpacker_advance()`, and the redraw fast path in `unpacker_parse_redraw()`. It ranks highly because this is the first structured parse of bytes arriving from RPC peers, including special treatment for UI redraw traffic, partial reads, and state-machine recovery.
 
 ## Relevant options and knobs
 
@@ -12,8 +12,8 @@ This is a Neovim-specific remote parser boundary. [`src/nvim/msgpack_rpc/unpacke
 
 ## Relevant files
 
-- [`src/nvim/msgpack_rpc/unpacker.c`](../../../neovim/src/nvim/msgpack_rpc/unpacker.c)
-- [`src/nvim/api/private/dispatch.c`](../../../neovim/src/nvim/api/private/dispatch.c)
+- [`src/nvim/msgpack_rpc/unpacker.c`](../../raw/neovim/src/nvim/msgpack_rpc/unpacker.c)
+- [`src/nvim/api/private/dispatch.c`](../../raw/neovim/src/nvim/api/private/dispatch.c)
 
 ## File tree
 
@@ -29,9 +29,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): describes msgpack-rpc as the main programmatic control plane and notes automatic API exposure.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): frames UI events and RPC transport as core Nvim architecture.
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): especially relevant because the build auto-generates dispatch glue for API exposure.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): describes msgpack-rpc as the main programmatic control plane and notes automatic API exposure.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): frames UI events and RPC transport as core Nvim architecture.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): especially relevant because the build auto-generates dispatch glue for API exposure.
 
 ## Recent fix / history signal
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Neovim-specific terminal-control boundary. [`src/nvim/terminal.c`](../../../neovim/src/nvim/terminal.c) converts OSC, DCS, and APC sequences from programs running inside `:terminal` into queued `TermRequest` events and related side effects. It ranks highly because untrusted terminal output can cross into autocommands and buffer state, and recent fixes show that lifecycle bugs here are not hypothetical.
+This is a Neovim-specific terminal-control boundary. [`src/nvim/terminal.c`](../../raw/neovim/src/nvim/terminal.c) converts OSC, DCS, and APC sequences from programs running inside `:terminal` into queued `TermRequest` events and related side effects. It ranks highly because untrusted terminal output can cross into autocommands and buffer state, and recent fixes show that lifecycle bugs here are not hypothetical.
 
 ## Relevant options and knobs
 
@@ -12,8 +12,8 @@ This is a Neovim-specific terminal-control boundary. [`src/nvim/terminal.c`](../
 
 ## Relevant files
 
-- [`src/nvim/terminal.c`](../../../neovim/src/nvim/terminal.c)
-- [`runtime/doc/terminal.txt`](../../../neovim/runtime/doc/terminal.txt)
+- [`src/nvim/terminal.c`](../../raw/neovim/src/nvim/terminal.c)
+- [`runtime/doc/terminal.txt`](../../raw/neovim/runtime/doc/terminal.txt)
 
 ## File tree
 
@@ -28,9 +28,9 @@ runtime/
 
 ## Big-picture references
 
-- [`runtime/doc/terminal.txt`](../../../neovim/runtime/doc/terminal.txt): documents `TermRequest` and important OSC use cases such as OSC 7 and OSC 133.
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): documents `termresponse` at the UI/API boundary.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): places terminal emulation and event-loop interactions in the core architecture map.
+- [`runtime/doc/terminal.txt`](../../raw/neovim/runtime/doc/terminal.txt): documents `TermRequest` and important OSC use cases such as OSC 7 and OSC 133.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): documents `termresponse` at the UI/API boundary.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): places terminal emulation and event-loop interactions in the core architecture map.
 
 ## Recent fix / history signal
 

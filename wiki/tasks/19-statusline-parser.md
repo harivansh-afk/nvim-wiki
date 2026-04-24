@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mixed inherited-and-Nvim-extended mini-language parser. [`src/nvim/statusline.c`](../../../neovim/src/nvim/statusline.c) renders `statusline` and `statuscolumn` format strings in `build_stl_str_hl()`, while [`src/nvim/optionstr.c`](../../../neovim/src/nvim/optionstr.c) validates them with `check_stl_option()`. It ranks highly because the code is parser-dense, historically overflow-prone, and mixes byte counts, display widths, recursive evaluation, and click-target bookkeeping.
+This is a mixed inherited-and-Nvim-extended mini-language parser. [`src/nvim/statusline.c`](../../raw/neovim/src/nvim/statusline.c) renders `statusline` and `statuscolumn` format strings in `build_stl_str_hl()`, while [`src/nvim/optionstr.c`](../../raw/neovim/src/nvim/optionstr.c) validates them with `check_stl_option()`. It ranks highly because the code is parser-dense, historically overflow-prone, and mixes byte counts, display widths, recursive evaluation, and click-target bookkeeping.
 
 ## Relevant options and knobs
 
@@ -13,8 +13,8 @@ This is a mixed inherited-and-Nvim-extended mini-language parser. [`src/nvim/sta
 
 ## Relevant files
 
-- [`src/nvim/statusline.c`](../../../neovim/src/nvim/statusline.c)
-- [`src/nvim/optionstr.c`](../../../neovim/src/nvim/optionstr.c)
+- [`src/nvim/statusline.c`](../../raw/neovim/src/nvim/statusline.c)
+- [`src/nvim/optionstr.c`](../../raw/neovim/src/nvim/optionstr.c)
 
 ## File tree
 
@@ -27,9 +27,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): authoritative documentation for `statusline`, `statuscolumn`, and related formatting options.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): documents Nvim-specific statusline/statuscolumn changes and format-surface growth.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): useful because option definitions are generated from metadata, while statusline rendering itself remains hand-coded.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): authoritative documentation for `statusline`, `statuscolumn`, and related formatting options.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): documents Nvim-specific statusline/statuscolumn changes and format-surface growth.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): useful because option definitions are generated from metadata, while statusline rendering itself remains hand-coded.
 
 ## Recent fix / history signal
 

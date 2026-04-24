@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mostly Vim-derived path-construction region adjacent to the tag jump pipeline. [`src/nvim/tag.c`](../../../neovim/src/nvim/tag.c) uses `get_tagfname()` to discover tag files, with special handling for help tags and a fallback that rewrites `helpfile` into a `tags` path. It earns its own ticket because recent security history includes explicit `helpfile` overflows, which means the path-discovery side of `tag.c` is not merely administrative glue.
+This is a mostly Vim-derived path-construction region adjacent to the tag jump pipeline. [`src/nvim/tag.c`](../../raw/neovim/src/nvim/tag.c) uses `get_tagfname()` to discover tag files, with special handling for help tags and a fallback that rewrites `helpfile` into a `tags` path. It earns its own ticket because recent security history includes explicit `helpfile` overflows, which means the path-discovery side of `tag.c` is not merely administrative glue.
 
 ## Relevant options and knobs
 
@@ -12,7 +12,7 @@ This is a mostly Vim-derived path-construction region adjacent to the tag jump p
 
 ## Relevant files
 
-- [`src/nvim/tag.c`](../../../neovim/src/nvim/tag.c)
+- [`src/nvim/tag.c`](../../raw/neovim/src/nvim/tag.c)
 
 ## File tree
 
@@ -24,9 +24,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/tagsrch.txt`](../../../neovim/runtime/doc/tagsrch.txt): user-facing tag search behavior.
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): documents `tags`, `helpfile`, and `runtimepath`-adjacent behavior.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): describes runtime path loading, useful for understanding help-tag discovery context.
+- [`runtime/doc/tagsrch.txt`](../../raw/neovim/runtime/doc/tagsrch.txt): user-facing tag search behavior.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): documents `tags`, `helpfile`, and `runtimepath`-adjacent behavior.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): describes runtime path loading, useful for understanding help-tag discovery context.
 
 ## Recent fix / history signal
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a narrow mixed-policy boundary rather than a broad subsystem. [`src/nvim/mapping.c`](../../../neovim/src/nvim/mapping.c) exposes `f_mapset()`, and [`src/nvim/ex_cmds.c`](../../../neovim/src/nvim/ex_cmds.c) provides `check_secure()`, the gate used to reject operations in secure or sandboxed contexts. It ranks highly because the recent modeline bypass fix landed exactly in this neighborhood: it is a concentrated example of how one missing or misapplied gate can break the whole trust model.
+This is a narrow mixed-policy boundary rather than a broad subsystem. [`src/nvim/mapping.c`](../../raw/neovim/src/nvim/mapping.c) exposes `f_mapset()`, and [`src/nvim/ex_cmds.c`](../../raw/neovim/src/nvim/ex_cmds.c) provides `check_secure()`, the gate used to reject operations in secure or sandboxed contexts. It ranks highly because the recent modeline bypass fix landed exactly in this neighborhood: it is a concentrated example of how one missing or misapplied gate can break the whole trust model.
 
 ## Relevant options and knobs
 
@@ -13,9 +13,9 @@ This is a narrow mixed-policy boundary rather than a broad subsystem. [`src/nvim
 
 ## Relevant files
 
-- [`src/nvim/mapping.c`](../../../neovim/src/nvim/mapping.c)
-- [`src/nvim/ex_cmds.c`](../../../neovim/src/nvim/ex_cmds.c)
-- [`src/nvim/options.lua`](../../../neovim/src/nvim/options.lua)
+- [`src/nvim/mapping.c`](../../raw/neovim/src/nvim/mapping.c)
+- [`src/nvim/ex_cmds.c`](../../raw/neovim/src/nvim/ex_cmds.c)
+- [`src/nvim/options.lua`](../../raw/neovim/src/nvim/options.lua)
 
 ## File tree
 
@@ -29,9 +29,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/message.txt`](../../../neovim/runtime/doc/message.txt): covers the classic secure-mode error messages exposed to users.
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): explains modeline and sandbox restrictions for option-setting behavior.
-- [`runtime/doc/editing.txt`](../../../neovim/runtime/doc/editing.txt): complements the trust/secure picture with the newer trusted-files model.
+- [`runtime/doc/message.txt`](../../raw/neovim/runtime/doc/message.txt): covers the classic secure-mode error messages exposed to users.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): explains modeline and sandbox restrictions for option-setting behavior.
+- [`runtime/doc/editing.txt`](../../raw/neovim/runtime/doc/editing.txt): complements the trust/secure picture with the newer trusted-files model.
 
 ## Recent fix / history signal
 

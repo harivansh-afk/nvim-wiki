@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is one of the clearest inherited untrusted-file boundaries in the tree. [`src/nvim/buffer.c`](../../../neovim/src/nvim/buffer.c) scans file contents with `do_modelines()` and parses candidate modelines with `chk_modeline()`, while option metadata in [`src/nvim/options.lua`](../../../neovim/src/nvim/options.lua) controls which settings are blocked or restricted. It ranks near the top because plain file text can influence editor behavior, and recent history proves that even narrow policy mistakes here can become security bugs.
+This is one of the clearest inherited untrusted-file boundaries in the tree. [`src/nvim/buffer.c`](../../raw/neovim/src/nvim/buffer.c) scans file contents with `do_modelines()` and parses candidate modelines with `chk_modeline()`, while option metadata in [`src/nvim/options.lua`](../../raw/neovim/src/nvim/options.lua) controls which settings are blocked or restricted. It ranks near the top because plain file text can influence editor behavior, and recent history proves that even narrow policy mistakes here can become security bugs.
 
 ## Relevant options and knobs
 
@@ -13,8 +13,8 @@ This is one of the clearest inherited untrusted-file boundaries in the tree. [`s
 
 ## Relevant files
 
-- [`src/nvim/buffer.c`](../../../neovim/src/nvim/buffer.c)
-- [`src/nvim/options.lua`](../../../neovim/src/nvim/options.lua)
+- [`src/nvim/buffer.c`](../../raw/neovim/src/nvim/buffer.c)
+- [`src/nvim/options.lua`](../../raw/neovim/src/nvim/options.lua)
 
 ## File tree
 
@@ -27,9 +27,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): the main user-facing documentation for `modeline`, `modelines`, and `modelineexpr`.
-- [`runtime/doc/starting.txt`](../../../neovim/runtime/doc/starting.txt): documents the long-standing warnings about unsafe local configuration and untrusted files.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): useful for separating legacy Vim semantics from Nvim trust-model changes.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): the main user-facing documentation for `modeline`, `modelines`, and `modelineexpr`.
+- [`runtime/doc/starting.txt`](../../raw/neovim/runtime/doc/starting.txt): documents the long-standing warnings about unsafe local configuration and untrusted files.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): useful for separating legacy Vim semantics from Nvim trust-model changes.
 
 ## Recent fix / history signal
 

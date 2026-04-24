@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mostly Vim-derived runtime-plugin boundary. `tar#Extract()` in [`runtime/autoload/tar.vim`](../../../neovim/runtime/autoload/tar.vim) turns the archive member name under the cursor into a shell-facing extraction command. That makes it high risk because attacker-controlled tar metadata can cross from archive parsing into process execution and filesystem writes. It ranks near the top because recent history already includes crafted-archive code execution, path-traversal fixes, and hardening around command construction.
+This is a mostly Vim-derived runtime-plugin boundary. `tar#Extract()` in [`runtime/autoload/tar.vim`](../../raw/neovim/runtime/autoload/tar.vim) turns the archive member name under the cursor into a shell-facing extraction command. That makes it high risk because attacker-controlled tar metadata can cross from archive parsing into process execution and filesystem writes. It ranks near the top because recent history already includes crafted-archive code execution, path-traversal fixes, and hardening around command construction.
 
 ## Relevant options and knobs
 
@@ -13,7 +13,7 @@ This is a mostly Vim-derived runtime-plugin boundary. `tar#Extract()` in [`runti
 
 ## Relevant files
 
-- [`runtime/autoload/tar.vim`](../../../neovim/runtime/autoload/tar.vim)
+- [`runtime/autoload/tar.vim`](../../raw/neovim/runtime/autoload/tar.vim)
 
 ## File tree
 
@@ -25,9 +25,9 @@ runtime/
 
 ## Big-picture references
 
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): frames runtime plugins as a major user-facing surface under `runtime/`.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): useful for judging how much runtime behavior is inherited from Vim versus Nvim-specific.
-- [`src/nvim/options.lua`](../../../neovim/src/nvim/options.lua): relevant indirectly for shell-related option metadata that influences command execution semantics.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): frames runtime plugins as a major user-facing surface under `runtime/`.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): useful for judging how much runtime behavior is inherited from Vim versus Nvim-specific.
+- [`src/nvim/options.lua`](../../raw/neovim/src/nvim/options.lua): relevant indirectly for shell-related option metadata that influences command execution semantics.
 
 ## Recent fix / history signal
 

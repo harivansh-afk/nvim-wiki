@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Neovim-specific policy surface rather than a parser or renderer. [`runtime/lua/vim/secure.lua`](../../../neovim/runtime/lua/vim/secure.lua) manages the trust database under `$XDG_STATE_HOME/nvim/trust`, while [`src/nvim/lua/secure.c`](../../../neovim/src/nvim/lua/secure.c) bridges that logic into C and `:trust`. It ranks highly because it decides whether local project code runs at all; if the policy is wrong, every higher-level exrc safeguard above it becomes moot.
+This is a Neovim-specific policy surface rather than a parser or renderer. [`runtime/lua/vim/secure.lua`](../../raw/neovim/runtime/lua/vim/secure.lua) manages the trust database under `$XDG_STATE_HOME/nvim/trust`, while [`src/nvim/lua/secure.c`](../../raw/neovim/src/nvim/lua/secure.c) bridges that logic into C and `:trust`. It ranks highly because it decides whether local project code runs at all; if the policy is wrong, every higher-level exrc safeguard above it becomes moot.
 
 ## Relevant options and knobs
 
@@ -13,8 +13,8 @@ This is a Neovim-specific policy surface rather than a parser or renderer. [`run
 
 ## Relevant files
 
-- [`runtime/lua/vim/secure.lua`](../../../neovim/runtime/lua/vim/secure.lua)
-- [`src/nvim/lua/secure.c`](../../../neovim/src/nvim/lua/secure.c)
+- [`runtime/lua/vim/secure.lua`](../../raw/neovim/runtime/lua/vim/secure.lua)
+- [`src/nvim/lua/secure.c`](../../raw/neovim/src/nvim/lua/secure.c)
 
 ## File tree
 
@@ -31,9 +31,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/editing.txt`](../../../neovim/runtime/doc/editing.txt): the main “trusted files” and `:trust` documentation, including the TOCTOU warning.
-- [`runtime/doc/lua.txt`](../../../neovim/runtime/doc/lua.txt): documents `vim.secure.read()` and `vim.secure.trust()`.
-- [`runtime/doc/news-0.12.txt`](../../../neovim/runtime/doc/news-0.12.txt): captures recent trust UX and semantics changes, including directory trust and the removal of the old “allow” prompt flow.
+- [`runtime/doc/editing.txt`](../../raw/neovim/runtime/doc/editing.txt): the main “trusted files” and `:trust` documentation, including the TOCTOU warning.
+- [`runtime/doc/lua.txt`](../../raw/neovim/runtime/doc/lua.txt): documents `vim.secure.read()` and `vim.secure.trust()`.
+- [`runtime/doc/news-0.12.txt`](../../raw/neovim/runtime/doc/news-0.12.txt): captures recent trust UX and semantics changes, including directory trust and the removal of the old “allow” prompt flow.
 
 ## Recent fix / history signal
 

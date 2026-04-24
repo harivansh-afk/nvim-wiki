@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mixed inherited-and-Nvim-wrapped shell boundary. [`src/nvim/os/shell.c`](../../../neovim/src/nvim/os/shell.c) builds shell commands for wildcard expansion, while [`src/nvim/path.c`](../../../neovim/src/nvim/path.c) contains `expand_backtick()`, which executes backtick payloads via `get_cmd_output()`. It ranks highly because it is classic command-construction code sitting on top of user-configurable shell behavior, and it recently needed a security fix for newline injection in `glob()`.
+This is a mixed inherited-and-Nvim-wrapped shell boundary. [`src/nvim/os/shell.c`](../../raw/neovim/src/nvim/os/shell.c) builds shell commands for wildcard expansion, while [`src/nvim/path.c`](../../raw/neovim/src/nvim/path.c) contains `expand_backtick()`, which executes backtick payloads via `get_cmd_output()`. It ranks highly because it is classic command-construction code sitting on top of user-configurable shell behavior, and it recently needed a security fix for newline injection in `glob()`.
 
 ## Relevant options and knobs
 
@@ -14,8 +14,8 @@ This is a mixed inherited-and-Nvim-wrapped shell boundary. [`src/nvim/os/shell.c
 
 ## Relevant files
 
-- [`src/nvim/os/shell.c`](../../../neovim/src/nvim/os/shell.c)
-- [`src/nvim/path.c`](../../../neovim/src/nvim/path.c)
+- [`src/nvim/os/shell.c`](../../raw/neovim/src/nvim/os/shell.c)
+- [`src/nvim/path.c`](../../raw/neovim/src/nvim/path.c)
 
 ## File tree
 
@@ -29,9 +29,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): explicitly marks shell / job / PTY boundaries as trust boundaries.
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): authoritative descriptions for shell-related options.
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): notes that wildcard expansion and expression evaluation are not “fast” operations, which matters for reentrancy assumptions.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): explicitly marks shell / job / PTY boundaries as trust boundaries.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): authoritative descriptions for shell-related options.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): notes that wildcard expansion and expression evaluation are not “fast” operations, which matters for reentrancy assumptions.
 
 ## Recent fix / history signal
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the Neovim-specific step where parsed RPC messages become work scheduled inside the editor. [`src/nvim/msgpack_rpc/channel.c`](../../../neovim/src/nvim/msgpack_rpc/channel.c) contains `parse_msgpack()`, `handle_request()`, and `request_event()`. It ranks highly because request/response association, fast-event behavior, queue routing, and object lifetime all meet here. If this layer is wrong, malformed or malicious peers do not just crash parsing—they can distort control flow.
+This is the Neovim-specific step where parsed RPC messages become work scheduled inside the editor. [`src/nvim/msgpack_rpc/channel.c`](../../raw/neovim/src/nvim/msgpack_rpc/channel.c) contains `parse_msgpack()`, `handle_request()`, and `request_event()`. It ranks highly because request/response association, fast-event behavior, queue routing, and object lifetime all meet here. If this layer is wrong, malformed or malicious peers do not just crash parsing—they can distort control flow.
 
 ## Relevant options and knobs
 
@@ -12,8 +12,8 @@ This is the Neovim-specific step where parsed RPC messages become work scheduled
 
 ## Relevant files
 
-- [`src/nvim/msgpack_rpc/channel.c`](../../../neovim/src/nvim/msgpack_rpc/channel.c)
-- [`src/nvim/api/vim.c`](../../../neovim/src/nvim/api/vim.c)
+- [`src/nvim/msgpack_rpc/channel.c`](../../raw/neovim/src/nvim/msgpack_rpc/channel.c)
+- [`src/nvim/api/vim.c`](../../raw/neovim/src/nvim/api/vim.c)
 
 ## File tree
 
@@ -28,9 +28,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): documents request ordering, `RPC only` APIs, and the control-plane role of msgpack-rpc.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): describes the event loop and fast-event constraints that shape dispatch behavior.
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): also matters because API methods like `nvim_exec_lua()` become high-value post-connect primitives once dispatch works.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): documents request ordering, `RPC only` APIs, and the control-plane role of msgpack-rpc.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): describes the event loop and fast-event constraints that shape dispatch behavior.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): also matters because API methods like `nvim_exec_lua()` become high-value post-connect primitives once dispatch works.
 
 ## Recent fix / history signal
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mixed inherited-concept but Nvim-specific binary-format parser. [`src/nvim/shada.c`](../../../neovim/src/nvim/shada.c) uses `shada_read_next_item()` to decode persisted editor state from a MessagePack-based file format. It ranks highly because it processes attacker-controlled on-disk data, supports compatibility and unknown-item handling, and already has real out-of-bounds and use-after-free history.
+This is a mixed inherited-concept but Nvim-specific binary-format parser. [`src/nvim/shada.c`](../../raw/neovim/src/nvim/shada.c) uses `shada_read_next_item()` to decode persisted editor state from a MessagePack-based file format. It ranks highly because it processes attacker-controlled on-disk data, supports compatibility and unknown-item handling, and already has real out-of-bounds and use-after-free history.
 
 ## Relevant options and knobs
 
@@ -12,8 +12,8 @@ This is a mixed inherited-concept but Nvim-specific binary-format parser. [`src/
 
 ## Relevant files
 
-- [`src/nvim/shada.c`](../../../neovim/src/nvim/shada.c)
-- [`src/nvim/msgpack_rpc/unpacker.c`](../../../neovim/src/nvim/msgpack_rpc/unpacker.c)
+- [`src/nvim/shada.c`](../../raw/neovim/src/nvim/shada.c)
+- [`src/nvim/msgpack_rpc/unpacker.c`](../../raw/neovim/src/nvim/msgpack_rpc/unpacker.c)
 
 ## File tree
 
@@ -27,9 +27,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): explains the move from Viminfo text files to binary MessagePack ShaDa.
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): documents the `shada` option and related persistence behavior.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): identifies file I/O and persisted editor state as a trust boundary.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): explains the move from Viminfo text files to binary MessagePack ShaDa.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): documents the `shada` option and related persistence behavior.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): identifies file I/O and persisted editor state as a trust boundary.
 
 ## Recent fix / history signal
 

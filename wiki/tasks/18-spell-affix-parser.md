@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mostly Vim-derived hostile-file parser and generator. [`src/nvim/spellfile.c`](../../../neovim/src/nvim/spellfile.c) reads external `.aff` and `.dic` data, tokenizes affix rules, and expands them into internal structures and generated spell words. It ranks highly because recent fixes included stack-buffer overflows in spell generation, and because this code mixes hand-rolled text parsing with fixed-size buffers and recursive word-building logic.
+This is a mostly Vim-derived hostile-file parser and generator. [`src/nvim/spellfile.c`](../../raw/neovim/src/nvim/spellfile.c) reads external `.aff` and `.dic` data, tokenizes affix rules, and expands them into internal structures and generated spell words. It ranks highly because recent fixes included stack-buffer overflows in spell generation, and because this code mixes hand-rolled text parsing with fixed-size buffers and recursive word-building logic.
 
 ## Relevant options and knobs
 
@@ -12,7 +12,7 @@ This is a mostly Vim-derived hostile-file parser and generator. [`src/nvim/spell
 
 ## Relevant files
 
-- [`src/nvim/spellfile.c`](../../../neovim/src/nvim/spellfile.c)
+- [`src/nvim/spellfile.c`](../../raw/neovim/src/nvim/spellfile.c)
 
 ## File tree
 
@@ -24,9 +24,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): user-facing spell options and file configuration.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): the big-picture persistent-file trust boundary.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): useful mainly as lineage context because this subsystem is still heavily inherited.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): user-facing spell options and file configuration.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): the big-picture persistent-file trust boundary.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): useful mainly as lineage context because this subsystem is still heavily inherited.
 
 ## Recent fix / history signal
 

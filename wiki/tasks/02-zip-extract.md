@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is another mostly Vim-derived runtime-plugin boundary, but one with a long run of recent hardening. `zip#Extract()` in [`runtime/autoload/zip.vim`](../../../neovim/runtime/autoload/zip.vim) takes the selected archive member name, rewrites it for GNU or PowerShell execution, and extracts it into the working directory. It ranks extremely high because the code repeatedly had to block traversal, absolute-path writes, and shell-adjacent edge cases on different platforms.
+This is another mostly Vim-derived runtime-plugin boundary, but one with a long run of recent hardening. `zip#Extract()` in [`runtime/autoload/zip.vim`](../../raw/neovim/runtime/autoload/zip.vim) takes the selected archive member name, rewrites it for GNU or PowerShell execution, and extracts it into the working directory. It ranks extremely high because the code repeatedly had to block traversal, absolute-path writes, and shell-adjacent edge cases on different platforms.
 
 ## Relevant options and knobs
 
@@ -13,8 +13,8 @@ This is another mostly Vim-derived runtime-plugin boundary, but one with a long 
 
 ## Relevant files
 
-- [`runtime/autoload/zip.vim`](../../../neovim/runtime/autoload/zip.vim)
-- [`runtime/doc/pi_zip.txt`](../../../neovim/runtime/doc/pi_zip.txt)
+- [`runtime/autoload/zip.vim`](../../raw/neovim/runtime/autoload/zip.vim)
+- [`runtime/doc/pi_zip.txt`](../../raw/neovim/runtime/doc/pi_zip.txt)
 
 ## File tree
 
@@ -28,9 +28,9 @@ runtime/
 
 ## Big-picture references
 
-- [`runtime/doc/pi_zip.txt`](../../../neovim/runtime/doc/pi_zip.txt): plugin-specific documentation, including a warning to be careful with untrusted input.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): runtime plugins are part of the supported user-facing surface, not just examples.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): useful when deciding whether a bug belongs to inherited runtime logic or newer Nvim wrappers.
+- [`runtime/doc/pi_zip.txt`](../../raw/neovim/runtime/doc/pi_zip.txt): plugin-specific documentation, including a warning to be careful with untrusted input.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): runtime plugins are part of the supported user-facing surface, not just examples.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): useful when deciding whether a bug belongs to inherited runtime logic or newer Nvim wrappers.
 
 ## Recent fix / history signal
 

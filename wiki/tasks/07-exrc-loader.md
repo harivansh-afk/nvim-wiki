@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Neovim-specific project-local configuration boundary. [`src/nvim/main.c`](../../../neovim/src/nvim/main.c) enters `do_exrc_initialization()`, which loads [`runtime/lua/vim/_core/exrc.lua`](../../../neovim/runtime/lua/vim/_core/exrc.lua); that module searches upward for `.nvim.lua`, `.nvimrc`, and `.exrc`, then executes trusted files. It ranks highly because this is an intentional arbitrary-code execution feature, and the safety of the feature depends on search order, stop conditions, and trust enforcement being exactly right.
+This is a Neovim-specific project-local configuration boundary. [`src/nvim/main.c`](../../raw/neovim/src/nvim/main.c) enters `do_exrc_initialization()`, which loads [`runtime/lua/vim/_core/exrc.lua`](../../raw/neovim/runtime/lua/vim/_core/exrc.lua); that module searches upward for `.nvim.lua`, `.nvimrc`, and `.exrc`, then executes trusted files. It ranks highly because this is an intentional arbitrary-code execution feature, and the safety of the feature depends on search order, stop conditions, and trust enforcement being exactly right.
 
 ## Relevant options and knobs
 
@@ -12,9 +12,9 @@ This is a Neovim-specific project-local configuration boundary. [`src/nvim/main.
 
 ## Relevant files
 
-- [`src/nvim/main.c`](../../../neovim/src/nvim/main.c)
-- [`runtime/lua/vim/_core/exrc.lua`](../../../neovim/runtime/lua/vim/_core/exrc.lua)
-- [`src/nvim/runtime.c`](../../../neovim/src/nvim/runtime.c)
+- [`src/nvim/main.c`](../../raw/neovim/src/nvim/main.c)
+- [`runtime/lua/vim/_core/exrc.lua`](../../raw/neovim/runtime/lua/vim/_core/exrc.lua)
+- [`src/nvim/runtime.c`](../../raw/neovim/src/nvim/runtime.c)
 
 ## File tree
 
@@ -32,9 +32,9 @@ runtime/
 
 ## Big-picture references
 
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): authoritative `exrc` behavior and trust requirements.
-- [`runtime/doc/starting.txt`](../../../neovim/runtime/doc/starting.txt): startup order, including when local config is discovered and sourced.
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): explains the Nvim-specific expansion of `exrc` to `.nvim.lua` and trust prompts.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): authoritative `exrc` behavior and trust requirements.
+- [`runtime/doc/starting.txt`](../../raw/neovim/runtime/doc/starting.txt): startup order, including when local config is discovered and sourced.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): explains the Nvim-specific expansion of `exrc` to `.nvim.lua` and trust prompts.
 
 ## Recent fix / history signal
 

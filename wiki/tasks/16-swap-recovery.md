@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a mostly Vim-derived hostile-file parser. [`src/nvim/memline.c`](../../../neovim/src/nvim/memline.c) uses `ml_recover()` to read untrusted swap metadata such as block numbers, page counts, and line-count hints before walking the memline tree. It ranks highly because malformed swapfiles previously triggered crashes and potentially huge allocations, and because recovery code is easy to under-test relative to normal editing paths.
+This is a mostly Vim-derived hostile-file parser. [`src/nvim/memline.c`](../../raw/neovim/src/nvim/memline.c) uses `ml_recover()` to read untrusted swap metadata such as block numbers, page counts, and line-count hints before walking the memline tree. It ranks highly because malformed swapfiles previously triggered crashes and potentially huge allocations, and because recovery code is easy to under-test relative to normal editing paths.
 
 ## Relevant options and knobs
 
@@ -12,7 +12,7 @@ This is a mostly Vim-derived hostile-file parser. [`src/nvim/memline.c`](../../.
 
 ## Relevant files
 
-- [`src/nvim/memline.c`](../../../neovim/src/nvim/memline.c)
+- [`src/nvim/memline.c`](../../raw/neovim/src/nvim/memline.c)
 
 ## File tree
 
@@ -24,9 +24,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): explains the memline tree as the core buffer-text data structure.
-- [`runtime/doc/options.txt`](../../../neovim/runtime/doc/options.txt): documents `directory` and `swapfile` behavior.
-- [`runtime/doc/starting.txt`](../../../neovim/runtime/doc/starting.txt): useful for recovery-mode and startup-file interaction context.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): explains the memline tree as the core buffer-text data structure.
+- [`runtime/doc/options.txt`](../../raw/neovim/runtime/doc/options.txt): documents `directory` and `swapfile` behavior.
+- [`runtime/doc/starting.txt`](../../raw/neovim/runtime/doc/starting.txt): useful for recovery-mode and startup-file interaction context.
 
 ## Recent fix / history signal
 

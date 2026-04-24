@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a Neovim-owned host-terminal input boundary. [`src/nvim/tui/input.c`](../../../neovim/src/nvim/tui/input.c) accepts raw bytes, handles focus and bracketed-paste escapes, grows libtermkey buffers for long sequences, and [`src/nvim/tui/termkey/driver-csi.c`](../../../neovim/src/nvim/tui/termkey/driver-csi.c) parses CSI parameter lists. It ranks highly because arbitrary terminal input arrives here before becoming keys, mode reports, or terminal responses, and this exact area already had out-of-bounds write history.
+This is a Neovim-owned host-terminal input boundary. [`src/nvim/tui/input.c`](../../raw/neovim/src/nvim/tui/input.c) accepts raw bytes, handles focus and bracketed-paste escapes, grows libtermkey buffers for long sequences, and [`src/nvim/tui/termkey/driver-csi.c`](../../raw/neovim/src/nvim/tui/termkey/driver-csi.c) parses CSI parameter lists. It ranks highly because arbitrary terminal input arrives here before becoming keys, mode reports, or terminal responses, and this exact area already had out-of-bounds write history.
 
 ## Relevant options and knobs
 
@@ -12,8 +12,8 @@ This is a Neovim-owned host-terminal input boundary. [`src/nvim/tui/input.c`](..
 
 ## Relevant files
 
-- [`src/nvim/tui/input.c`](../../../neovim/src/nvim/tui/input.c)
-- [`src/nvim/tui/termkey/driver-csi.c`](../../../neovim/src/nvim/tui/termkey/driver-csi.c)
+- [`src/nvim/tui/input.c`](../../raw/neovim/src/nvim/tui/input.c)
+- [`src/nvim/tui/termkey/driver-csi.c`](../../raw/neovim/src/nvim/tui/termkey/driver-csi.c)
 
 ## File tree
 
@@ -28,9 +28,9 @@ src/
 
 ## Big-picture references
 
-- [`runtime/doc/vim_diff.txt`](../../../neovim/runtime/doc/vim_diff.txt): documents the simplified `ttimeout` behavior in Nvim’s TUI.
-- [`runtime/doc/dev_arch.txt`](../../../neovim/runtime/doc/dev_arch.txt): the architecture-level trust boundary for host terminal bytes becoming editor input.
-- [`runtime/doc/api.txt`](../../../neovim/runtime/doc/api.txt): useful for the `termresponse` side of the same overall terminal I/O picture.
+- [`runtime/doc/vim_diff.txt`](../../raw/neovim/runtime/doc/vim_diff.txt): documents the simplified `ttimeout` behavior in Nvim’s TUI.
+- [`runtime/doc/dev_arch.txt`](../../raw/neovim/runtime/doc/dev_arch.txt): the architecture-level trust boundary for host terminal bytes becoming editor input.
+- [`runtime/doc/api.txt`](../../raw/neovim/runtime/doc/api.txt): useful for the `termresponse` side of the same overall terminal I/O picture.
 
 ## Recent fix / history signal
 
