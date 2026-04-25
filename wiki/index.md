@@ -78,6 +78,8 @@ Hostile-file parsers and persisted-state readers for swap recovery, ShaDa, and s
 | [Swap recovery parser](tasks/16-swap-recovery.md) | Recovery-time parsing of untrusted swap metadata in `memline.c`. | 2026-04-23 |
 | [ShaDa item parser](tasks/17-shada-parser.md) | MessagePack-based persisted-state parsing and compatibility handling in `shada.c`. | 2026-04-23 |
 | [Spell affix parser](tasks/18-spell-affix-parser.md) | `.aff` and `.dic` parsing plus spell generation logic in `spellfile.c`. | 2026-04-23 |
+| [Undo file parser](tasks/26-undo-file-parser.md) | `u_read_undo` parses persisted undo state when `'undofile'` is on. | 2026-04-24 |
+| [Quickfix `'errorformat'` parser](tasks/27-quickfix-errorformat.md) | Hand-rolled mini-language in `quickfix.c` consuming `:cfile`/`:make` output. | 2026-04-24 |
 
 ## display-and-formatting
 
@@ -87,6 +89,28 @@ Mini-language and option parsing for statusline-like rendering surfaces.
 |---------|---------|---------|
 | [Display and formatting surfaces](codebase/display-and-formatting-surfaces.md) | Shows where statusline-like format strings are validated, rendered, and extended by option metadata. | 2026-04-23 |
 | [Statusline mini-language parser](tasks/19-statusline-parser.md) | Statusline, statuscolumn, and rulerformat parsing in `statusline.c` and `optionstr.c`. | 2026-04-23 |
+
+## filetype-and-runtime
+
+Auto-execution surfaces driven by `'filetype'`, `'runtimepath'`, Lua `require`, treesitter parser loading, and the `nvim://` URI handler. Maintainer-tracked in [#38985](https://github.com/neovim/neovim/issues/38985).
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [Lua `require` from CWD](tasks/21-package-path-cwd.md) | `package.path='./?.lua'` fallback after `vim._load_package` ([#38966](https://github.com/neovim/neovim/issues/38966)). | 2026-04-24 |
+| [Ftplugin shell sinks via `'filetype'`](tasks/22-ftplugin-system.md) | Modeline-set `'filetype'` triggers ftplugins that may invoke `system()` on attacker-influenced filenames ([#39044](https://github.com/neovim/neovim/issues/39044)). | 2026-04-24 |
+| [Treesitter language loader](tasks/23-treesitter-language-loader.md) | Parser path resolution beyond the [GHSA-6f9m](cves/GHSA-6f9m.md) fix; WASM sandbox tracked in [#23579](https://github.com/neovim/neovim/issues/23579). | 2026-04-24 |
+| [Runtimepath sourcing](tasks/24-runtimepath-sourcing.md) | `do_in_path` / `source_runtime_vim_lua` / `do_source` chain ([#10732](https://github.com/neovim/neovim/issues/10732)). | 2026-04-24 |
+| [`nvim://` URI scheme](tasks/25-nvim-uri.md) | New OS-level URI handler ([#38006](https://github.com/neovim/neovim/pull/38006)). | 2026-04-24 |
+
+## lifecycle-and-races
+
+Reentrancy, callback-lifetime, and filesystem-race surfaces.
+
+| Article | Summary | Updated |
+|---------|---------|---------|
+| [Autocmd deferred execution and reentrancy](tasks/28-autocmd-deferral.md) | Variant-hunt for UAF/double-free across autocmd-fire sites. | 2026-04-24 |
+| [Extmark / decoration lifetime](tasks/29-extmark-decoration-lifetime.md) | Marktree and decoration provider lifetime under RPC + Lua mutation. | 2026-04-24 |
+| [`:write` backup-copy filesystem race](tasks/30-write-backup-race.md) | TOCTOU class that produced [GHSA-3r8v](cves/GHSA-3r8v.md); variant-hunt sibling write paths. | 2026-04-24 |
 
 ## neovim
 
